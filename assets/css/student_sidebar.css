@@ -1,0 +1,333 @@
+/* =========================================
+   STUDENT SIDEBAR
+========================================= */
+
+:root {
+    --sidebar-bg: #0d1526;
+    --sidebar-border: rgba(255, 255, 255, 0.08);
+
+    --primary: #5b7cff;
+    --secondary: #7c3aed;
+
+    --text: #f8fafc;
+    --muted: #94a3b8;
+    --muted-dark: #64748b;
+}
+
+
+/* =========================================
+   SIDEBAR
+========================================= */
+
+.sidebar {
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 265px;
+
+    height: 100vh;
+
+    padding: 25px 16px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    background:
+        linear-gradient(
+            180deg,
+            #0d1526,
+            #09111f
+        );
+
+    border-right:
+        1px solid
+        var(--sidebar-border);
+
+    z-index: 1000;
+}
+
+
+/* =========================================
+   BRAND
+========================================= */
+
+.brand {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding:
+        8px
+        10px
+        34px;
+}
+
+
+.brand-icon {
+
+    width: 44px;
+    height: 44px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 14px;
+
+    color: white;
+
+    font-size: 17px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #5b7cff,
+            #7c3aed
+        );
+
+    box-shadow:
+        0 12px 30px
+        rgba(91, 124, 255, 0.25);
+}
+
+
+.brand-text {
+
+    display: flex;
+
+    flex-direction: column;
+}
+
+
+.brand-text strong {
+
+    color: white;
+
+    font-family:
+        "Outfit",
+        sans-serif;
+
+    font-size: 17px;
+
+    font-weight: 700;
+
+    white-space: nowrap;
+}
+
+
+.brand-text span {
+
+    margin-top: 4px;
+
+    color: #94a3b8;
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+}
+
+
+/* =========================================
+   NAVIGATION
+========================================= */
+
+.sidebar-nav {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+
+    flex: 1;
+}
+
+
+.nav-section-title {
+
+    color: #64748b;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.3px;
+
+    text-transform: uppercase;
+
+    padding:
+        0
+        12px;
+
+    margin-bottom: 10px;
+}
+
+
+/* =========================================
+   NAV LINKS
+========================================= */
+
+.nav-link {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+
+    padding:
+        13px
+        14px;
+
+    border-radius: 12px;
+
+    color: #94a3b8;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    transition:
+        all
+        0.25s
+        ease;
+}
+
+
+.nav-link i {
+
+    width: 19px;
+
+    text-align: center;
+
+    font-size: 15px;
+}
+
+
+/* HOVER */
+
+.nav-link:hover {
+
+    color: white;
+
+    background:
+        rgba(255, 255, 255, 0.06);
+
+    transform:
+        translateX(3px);
+}
+
+
+/* ACTIVE PAGE */
+
+.nav-link.active {
+
+    color: white;
+
+    background:
+        linear-gradient(
+            135deg,
+            #5b7cff,
+            #7c3aed
+        );
+
+    box-shadow:
+        0 10px 25px
+        rgba(91, 124, 255, 0.22);
+}
+
+
+/* =========================================
+   LOGOUT
+========================================= */
+
+.sidebar-bottom {
+
+    margin-top: auto;
+}
+
+
+.sidebar-divider {
+
+    height: 1px;
+
+    background:
+        rgba(255, 255, 255, 0.08);
+
+    margin:
+        15px
+        8px;
+}
+
+
+.logout-link:hover {
+
+    color: #fca5a5;
+
+    background:
+        rgba(239, 68, 68, 0.10);
+}
+
+
+/* =========================================
+   MOBILE OVERLAY
+========================================= */
+
+.sidebar-overlay {
+
+    display: none;
+
+    position: fixed;
+
+    inset: 0;
+
+    background:
+        rgba(0, 0, 0, 0.65);
+
+    z-index: 999;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 850px) {
+
+    .sidebar {
+
+        transform:
+            translateX(-100%);
+
+        transition:
+            transform
+            0.3s
+            ease;
+    }
+
+
+    .sidebar.show {
+
+        transform:
+            translateX(0);
+    }
+
+
+    .sidebar-overlay.show {
+
+        display: block;
+    }
+
+}

@@ -1,0 +1,273 @@
+/* =========================================
+   RECRUITER SIDEBAR
+========================================= */
+
+.sidebar {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+    bottom: 0;
+
+    width: 265px;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 28px 18px;
+
+    background: #0b1220;
+
+    border-right: 1px solid rgba(255, 255, 255, 0.07);
+
+    z-index: 1000;
+
+    overflow-y: auto;
+}
+
+
+/* =========================================
+   BRAND
+========================================= */
+
+.brand {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 6px 12px 30px;
+}
+
+
+.brand-icon {
+    width: 54px;
+    height: 54px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 16px;
+
+    font-size: 20px;
+
+    color: white;
+
+    background: linear-gradient(
+        135deg,
+        #60a5fa,
+        #7c3aed
+    );
+
+    box-shadow:
+        0 10px 25px
+        rgba(91, 124, 255, 0.25);
+}
+
+
+.brand-text {
+    min-width: 0;
+}
+
+
+.brand-title {
+    color: #f1f5f9;
+
+    font-size: 20px;
+
+    font-weight: 700;
+
+    white-space: nowrap;
+}
+
+
+.brand-subtitle {
+    margin-top: 5px;
+
+    color: #94a3b8;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+}
+
+
+/* =========================================
+   NAVIGATION
+========================================= */
+
+.sidebar nav {
+    display: flex;
+
+    flex-direction: column;
+
+    flex: 1;
+}
+
+
+.nav-section {
+    margin-bottom: 25px;
+}
+
+
+.nav-label {
+    padding: 0 15px;
+
+    margin-bottom: 10px;
+
+    color: #64748b;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+}
+
+
+/* =========================================
+   NAV LINKS
+========================================= */
+
+.nav-link {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    width: 100%;
+
+    padding: 11px 13px;
+
+    margin-bottom: 4px;
+
+    border-radius: 12px;
+
+    color: #cbd5e1;
+
+    text-decoration: none;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+.nav-link i {
+    width: 20px;
+
+    text-align: center;
+
+    font-size: 17px;
+}
+
+
+.nav-link:hover {
+    color: white;
+
+    background: rgba(255, 255, 255, 0.06);
+
+    transform: translateX(3px);
+}
+
+
+/* =========================================
+   ACTIVE PAGE
+========================================= */
+
+.nav-link.active {
+    color: white;
+
+    background: linear-gradient(
+        90deg,
+        #5b7cff,
+        #7c3aed
+    );
+
+    box-shadow:
+        0 8px 22px
+        rgba(91, 124, 255, 0.22);
+}
+
+
+/* =========================================
+   LOGOUT - ALWAYS AT BOTTOM
+========================================= */
+
+.logout-link {
+    margin-top: auto;
+
+    margin-bottom: 5px;
+
+    color: #fca5a5;
+
+    border-top:
+        1px solid
+        rgba(255, 255, 255, 0.07);
+
+    padding-top: 18px;
+
+    border-radius: 0;
+}
+
+
+.logout-link:hover {
+    color: #fecaca;
+
+    background: rgba(239, 68, 68, 0.10);
+
+    transform: translateX(3px);
+}
+
+
+/* =========================================
+   MOBILE OVERLAY
+========================================= */
+
+.sidebar-overlay {
+    display: none;
+
+    position: fixed;
+
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.55);
+
+    z-index: 999;
+}
+
+
+.sidebar-overlay.show {
+    display: block;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 850px) {
+
+    .sidebar {
+        transform: translateX(-100%);
+
+        transition: transform 0.3s ease;
+    }
+
+
+    .sidebar.show {
+        transform: translateX(0);
+    }
+
+}
