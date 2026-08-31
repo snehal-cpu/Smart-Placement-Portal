@@ -1,58 +1,46 @@
 # 🎓 Smart Placement Portal
 
-A web-based **Smart Placement Portal** designed to connect students and recruiters through a centralized placement management system.
+A full-stack web-based **Smart Placement Portal** designed to simplify the placement process by connecting **students and recruiters** on a centralized platform.
 
-The platform allows recruiters to post and manage job opportunities while students can create profiles, explore available jobs, apply for opportunities, and track their application status.
+Students can build and manage their profiles, explore job opportunities, apply for jobs, and track their application status. Recruiters can manage their company profiles, post job opportunities, manage jobs, and view applicants.
 
 ---
 
 ## 🚀 Features
 
-### 👨‍🎓 Student Module
+### 👨‍🎓 Student Portal
 
-- Student Registration and Login
-- Secure Authentication
+- Secure Student Registration and Login
+- Role-Based Authentication
 - Student Dashboard
 - Profile Management
-- View Available Jobs
+- Resume Management
+- Browse Available Job Opportunities
+- View Job Details
 - Apply for Jobs
 - Track Application Status
-- View Shortlisted Applications
-- View Selected Applications
-- Resume Management
+- View Shortlisted and Selected Applications
 - Recent Application Activity
 
----
-
-### 🏢 Recruiter Module
+### 🏢 Recruiter Portal
 
 - Recruiter Registration and Login
+- Role-Based Authentication
 - Recruiter Dashboard
 - Company Profile Management
-- Post New Jobs
+- Post New Job Opportunities
 - Manage Posted Jobs
 - Edit Job Details
-- View Applicants
-- Manage Student Applications
+- View Job Applicants
+- Manage Candidate Applications
 
 ---
 
-### 🔐 Authentication & Security
-
-- Role-Based Authentication
-- Student Access Control
-- Recruiter Access Control
-- Secure Session Management
-- Protected Dashboard Pages
-- Password-Based Login System
-
----
-
-## 📊 Dashboard Features
+## 📊 Dashboard
 
 ### Student Dashboard
 
-The student dashboard provides:
+The student dashboard provides an overview of:
 
 - Total Applications
 - Shortlisted Applications
@@ -64,13 +52,27 @@ The student dashboard provides:
 
 ### Recruiter Dashboard
 
-The recruiter dashboard provides:
+The recruiter portal allows recruiters to:
 
-- Job Management
-- Applicant Management
-- Company Profile Access
-- Job Posting Features
-- Placement Activity Overview
+- Manage their company profile
+- Post new job opportunities
+- Manage posted jobs
+- View applicants
+- Manage placement activities
+
+---
+
+## 🔐 Authentication & Security
+
+The project implements:
+
+- Role-Based Access Control
+- Student Authentication
+- Recruiter Authentication
+- Secure Session Management
+- Protected Dashboard Pages
+- Logout Functionality
+- Separate Student and Recruiter Access
 
 ---
 
@@ -95,16 +97,14 @@ The recruiter dashboard provides:
 ### Development Environment
 
 - XAMPP
-- Apache Server
+- Apache
 
 ---
 
 ## 📁 Project Structure
 
 ```text
-SmartPlacementPortal/
-│
-├── admin/
+Smart-Placement-Portal/
 │
 ├── config/
 │   └── database.php
@@ -130,9 +130,10 @@ SmartPlacementPortal/
 │
 ├── uploads/
 │
+├── index.php
 ├── login.php
 ├── register.php
 ├── logout.php
-├── index.php
 │
+├── .gitignore
 └── README.md
